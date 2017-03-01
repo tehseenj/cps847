@@ -25,6 +25,6 @@ deploy:
   provider: s3
   access_key_id: AKIAIV2WBWIDYMDXQFCQ #populate with your own AWS access key
   secret_access_key: TlLQUQZcYdLg08JjjOkOiaCFBqzOXS3RBh0TEqhJ #populate with your own AWS secret key
-  bucket: avm-example.com
+  bucket: cps847-tehseenj
   local-dir: lecture9/sample_html
   region: us-west-2
