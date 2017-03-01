@@ -7,15 +7,24 @@ python:
 
 # command to install dependencies
 install:
+  - pip install codecov
+  - pip install coverage
+
 #  - pip install ./lecture7/
 #  - pip install -r ./lecture7/requirements.txt
 
 script: 
   - python -m unittest discover -v ./lecture7/ # command to run unit test
+  - coverage run ./lecture7/test.py # command to run code coverage
 
 #can do additional things, say send out reports, which we will discuss next time
 after_success:
+  - codecov --token=184a5c65-ea45-49f1-875b-63cd6672899d # upload coverage report to codecov.io
 
-
-
-
+deploy:
+  provider: s3
+  access_key_id: AKIAIV2WBWIDYMDXQFCQ #populate with your own AWS access key
+  secret_access_key: TlLQUQZcYdLg08JjjOkOiaCFBqzOXS3RBh0TEqhJ #populate with your own AWS secret key
+  bucket: avm-example.com
+  local-dir: lecture9/sample_html
+  region: us-west-2
