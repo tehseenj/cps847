@@ -23,8 +23,8 @@ after_success:
 
 deploy:
   provider: s3
-  access_key_id: AKIAIV2WBWIDYMDXQFCQ #populate with your own AWS access key
-  secret_access_key: TlLQUQZcYdLg08JjjOkOiaCFBqzOXS3RBh0TEqhJ #populate with your own AWS secret key
+  access_key_id: AKIAJSTVDEMTOA6C7QAA #populate with your own AWS access key
+  secret_access_key: /tCrnLDArEi1Faq4/HZidrqNnNON1jvmAqiiDV9n #populate with your own AWS secret key
   bucket: cps847-tehseenj
   local-dir: lecture9/sample_html
   region: us-west-2
